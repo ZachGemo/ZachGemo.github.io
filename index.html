@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+  <div></div>
+</head>
+
+<body>
+
+
+<link href="https://fonts.googleapis.com/css?family=Lobster|Permanent+Marker" rel="stylesheet">
+
+
+<img class="crownClass"id="crown" src='crown.png' alt= "a picture of a crown">
+<h1>Hip Hop History</h1>
+
+<h2>Learn something new!</h2>
+
+<h3>Click the button to learn about musicians who had a profound impact on hip hop music and culture.</h3>
+
+<h3>Every click will generate a random artist from a list of legends and display them below.</h3>
+<button class="example_a" onclick="myFunction()">Click me</button>
+
+<p  id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<img class = "imageClass"id="myImg" src=''>
+<a  class= "example_b"href="" id="interview">Interview with the Artist</a>
+<a  href="" id="work">Notable Work</a>
+
+
+<script>
+
+function myFunction() {
+
+var whichArtist =   items.artists[Math.floor(Math.random()*items.artists.length)];
+document.getElementById("demo").innerHTML = whichArtist.name;
+  document.getElementById("demo2").innerHTML = whichArtist.yearsActive;
+  document.getElementById("demo3").innerHTML = whichArtist.bio;
+  document.getElementById("myImg").src=whichArtist.image;
+  document.getElementById('demo').style.display='block';
+  document.getElementById('myImg').style.display='flex';
+  document.getElementById('demo2').style.display='block';
+  document.getElementById('demo3').style.display='block';
+  document.getElementById('interview').style.display='flex';
+var artistLink = document.getElementById('interview');
+var artistWork = document.getElementById('work');
+ artistLink.setAttribute('href', whichArtist.link);
+ artistWork.setAttribute('href', whichArtist.work);
+artistWork.setAttribute('visibility: "visible"');
+artistLink.setAttribute('visibility: "visible"');
+}
+
+
+
+var items={
+
+    "artists":[
+        { "name":"Artist: J Dilla",
+        "yearsActive":"Years Active: 1993-2006",
+        "bio":'Known as a hip hop producer, J Dilla influenced the sound of hip hop in many ways. Most notably by making his beats sound like a live performance. The natural feel of the imperfections in his rhythyms led many producers to imitate his drum grooves. His sound led a new breed of producers to create beats that roll like an egg.  His influence has reached many modern artists and his impact will be heard forever. ',
+        "image":'jdilla.jpg',
+        "link":"https://www.youtube.com/watch?v=l_1M0vM8d5c",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: Salt n Pepa",
+        "yearsActive":"Years Active: 1985-2002, 2005-present" ,
+        "bio":'Pioneers in their own right, Salt n Pepa were the first female rappers to receive gold and platinum status on their records. They were also one of the first female rap acts to win a Grammy award. In addition to being the first popular female rap act, they used their influence to promote safe sex, most notably with their hit “Let’s Talk about Sex”.',
+        "image":'saltnpepa.png',
+        "link": "https://www.youtube.com/watch?v=KwhT3NuLZAc",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: The Isley Brothers",
+        "yearsActive":"Years Active: 1954-present",
+        "bio":'A classic band with a large array of hits, The Isley Brothers influenced hip hop most notably by being sampled over and over throughout the years. The instrumentation and tempo choices of there songs created ideal platforms for hip hop beats. ' ,
+        "image":'isleys.jpg',
+        "link":"https://www.youtube.com/watch?v=hPyABBgYehk",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: James Brown",
+        "yearsActive":"Years Active: 1953-1988, 1991-2006",
+        "bio":'The Godfather of Soul, James Brown influenced hip hop most notably by being sampled over and over throughout the years. The instrumentation and tempo choices of there songs created ideal platforms for hip hop beats. ' ,
+        "image":'jamesbrown.jpg',
+        "link":"https://www.youtube.com/watch?v=iJXITLhrzJw",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: Curtis Mayfield",
+        "yearsActive":"Years Active: 1956-1999",
+        "bio":'An artistic phenomenon with a large array of hits, Curtis Mayfield  influenced hip hop most notably by being sampled over and over throughout the years. The instrumentation and tempo choices of his songs created ideal platforms for hip hop beats. ' ,
+        "image":'curtis.png',
+        "link":"https://www.youtube.com/watch?v=tlJke18xLi0",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: Marvin Gaye",
+        "yearsActive":"Years Active: 1957-1984",
+        "bio":'A soul singer whos hits span across decades, Marvin Gaye  influenced hip hop most notably by being sampled over and over throughout the years. The instrumentation and tempo choices of his songs created ideal platforms for hip hop beats. ' ,
+        "image":'marvin.jpg',
+        "link":"https://www.youtube.com/watch?v=g5NP_8eCEEo",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: Will Smith",
+        "yearsActive":"Years Active: 1985-present",
+        "bio":'Overseen by many, Will Smith’s influence on hip hop is often drowned out by his other achievements. His profanity-free lyrics combined with outstanding story-telling skills led him to be a incredibly influential rapper in his own right.  ' ,
+        "image":'smith.jpg',
+        "link":"https://www.youtube.com/watch?v=AiVFAseIAuQ",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: MF DOOM",
+        "yearsActive":"Years Active: 1988-present",
+        "bio":'An underground rapper/producer, MF DOOM has influenced many pop and mainstream rappers with his incredible wordplay and poetic ability. Additionally, his beats have stood as the platform for many great hip hop songs.  ' ,
+        "image":'doom.jpg',
+        "link":"https://www.youtube.com/watch?v=JGu0ao_rdAk",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" },
+        { "name":"Artist: E-40",
+        "yearsActive":"Years Active: 1986-present",
+        "bio":'An underground rapper, E-40 has influenced many pop and mainstream rappers with his off-kilter flow, allowing many more rhythyms to be applied to a given beat. ' ,
+        "image":'E40.jpg',
+        "link":"https://www.youtube.com/watch?v=eUY_K9En_YQ",
+        "work":"https://www.youtube.com/watch?v=AdZK0HeYkwM" }
+
+
+    ]
+};
+
+
+</script>
+
+</body>
+</html>
